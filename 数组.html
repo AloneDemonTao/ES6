@@ -1,1 +1,64 @@
+<?DOCTYOE HTML>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title></title>
+  </head>
+  <body>
+  
+  </body>
+  <script>
+    //map实例-------------------------------
+    // let arr = [2,3,44];
+    // let result =arr.map(item=>item*2)
+    // alert(result)
 
+    //-------------------------------
+    // let show = [67,54,78,54,68,61,39];
+    // let result = show.map(item=>item>=60?'及格':'不及格');
+    // alert(result);
+
+    //reduce实例----------------------------tmp存储中间数，index是下表，第一次的时候25作为家属第一个和item相加，得到88，tmp就相当于88与item下一个数相加
+
+    // let arr = [21,63,78];
+    // let result = arr.reduce(function(tmp,item,index){
+    //   if(index != arr.length-1){
+    //     return tmp+item;
+    //   }else{
+    //     return (tmp+item)/arr.length;
+    //   }
+    // });
+    // alert(result);
+
+    //filter实例----------------------------
+    // let arr = [33,56,78,55,44];
+    // let result = arr.filter(item=>{
+    //   if(item%3==0){
+    //     return true;
+    //   }else{
+    //     return false;
+    //   }
+    // })
+    // alert(result);
+
+    //----------------------------
+    // let arr = [
+    //   {title:'口红',price: 88},
+    //   {title:'鞋',price: 635},
+    //   {title:'包',price:868},
+    //   {title:'彩妆',price:54235},
+    //   {title:'衣服',price:6543},
+
+    // ];
+    // let result = arr.filter(json=>json.price >= 1000);
+
+    // alert(result);
+
+        //forEach实例----------------------------
+    let arr=[3,5,4,2];
+    arr.forEach((item,index)=>{
+      alert(index+':'+item);
+    })
+
+  </script>
+</html>
