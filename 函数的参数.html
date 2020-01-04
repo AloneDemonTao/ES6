@@ -1,1 +1,74 @@
+<?DOCTYOE HTML>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title></title>
+  </head>
+  <body>
+  
+  </body>
+  <script>
+    // 例1，普通函数传值，a,b,c能接收到，多传的参数就不能接收到,使用剩余参数...args,args会收集剩余的参数，但是剩余参数只能反正参数的最后一位
+    // function show(a, b, c){
+    //   alert(a);
+    //   alert(b);
+    //   alert(c);
+    // }
+    // show(11,22,45,12)  //普通函数
 
+    // function show(a, b, ...c){
+    //  alert(a);
+    //  alert(b);
+    //  alert(c);
+    //}
+    //show(11,22,45,12) //使用剩余函数
+
+     // 例2,收集参数,使用...arr，可以收集arr数组里面的数据，传值给函数show
+     // let arr = [1,6,8]
+     
+     // function show(a,b,c){
+     //  alert(a);
+     //  alert(b);
+     //  alert(c);
+
+     // }
+     //  show(1,2,3)  //普通函数
+
+     // let arr = [1,6,8]
+     // show(...arr)
+     // function show(a,b,c){
+     //  alert(a);
+     //  alert(b);
+     //  alert(c);
+     // }
+
+    // 例3,收集参数,输出值为arr3=[11,5,5,5,6,2]
+    // let arr1 = [11,5,5];
+    // let arr2 = [5,6,2];
+
+    // let arr3 = [...arr1,...arr2];
+
+    // alert(arr3)
+
+    // 例4-----------------------------------
+    // function show(...arr){
+    //   fn(...arr)
+    // }
+
+    // function fn(a,b){
+    //   alert(a+b)
+    // }
+    // show(12,4)
+
+    // 例5,默认参数,你给我传值，我就用，不传我也有----------------------------
+
+    function show(a,b=2,c=30){
+      alert(a);
+      alert(b);
+      alert(c);
+    }
+    show(1,5);  //结果：a =1,b=5,c=30
+
+
+  </script>
+</html>
