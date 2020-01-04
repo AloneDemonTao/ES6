@@ -1,1 +1,61 @@
+<?DOCTYOE HTML>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title></title>
+  </head>
+  <body>
+  
+  </body>
+  <script>
+    //箭头函数就是平常函数的简写
 
+    // 例1 去掉function,function（）后加=>
+    // window.onload = function(){
+    //   alert("abc");
+    // }   //普通函数
+
+    //  window.onload = ()=>{
+    //   alert("abc");
+    // }//箭头函数
+    // ---------------------------------------------------
+
+
+     // 例2 去掉function,function（）后加=>
+     // let show = function(i){
+     //  alert(i)
+     // }
+     // show(2)  //普通函数
+
+    // let show = (i) =>{
+    //     alert(i)
+    //    }
+    // show(3)//箭头函数
+    // ---------------------------------------------------
+
+    // 例子3 去掉function,function（）后加=>
+    // let arr = [12,5,9,7,6,99,788,587]
+    // arr.sort(function(n1,n2){
+    //   return n1-n2;
+    // })
+    // alert(arr)  //普通函数
+
+    // let arr = [12,5,9,7,6,99,788,587]
+    // arr.sort((n1,n2)=>{
+    //   return n1-n2;
+    // })
+    // alert(arr) //箭头函数
+    // ---------------------------------------------------
+
+    // 例子4 只有一个参数时，（a）的（）,可以去掉，只有一个return,可以连带花括号和return一起去掉
+    // let show = function(a){
+    //   return a*2;
+    // };
+    // alert(show(2));
+    
+    let show =a=>a*2;
+    alert(show(2)); //箭头函数
+
+
+  </script>
+</html>
