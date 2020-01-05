@@ -1,0 +1,105 @@
+<?DOCTYOE HTML>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title></title>
+  </head>
+  <body>
+  
+  </body>
+  <script>
+      //老版本的面向对象写法
+      // function User(name,pass){//User就是一个类、构造函数
+      //   this.name = name;
+      //   this.pass = pass;
+
+      // }
+      // User.prototype.showName = function (){
+      //   alert(this.name);
+      // };
+      // User.prototype.showPass = function(){
+      //   alert(this.pass);
+      // };
+      // var u1=new User("bule","1111");
+      // u1.showName();
+      // u1.showPass();
+
+      //ES6推出的面向对象
+      // class User{
+      //   constructor(name,pass){  //constructor构造器
+      //     this.name = name;
+      //     this.pass = pass;
+      //   }
+      //   showName(){
+      //     alert(this.name)
+      //   }
+      //   showpass(){
+      //     alert(this.pass)
+      //   }
+
+      // }
+      // var op=new User("fdaf","43124");
+      // op.showName();
+      // op.showpass();
+
+      // 继承
+      //老方法
+      // function User(name,pass){//User就是一个类、构造函数
+      //   this.name = name;
+      //   this.pass = pass;
+
+      // }
+      // User.prototype.showName = function (){
+      //   alert(this.name);
+      // };
+      // User.prototype.showPass = function(){
+      //   alert(this.pass);
+      // };
+      // function VipUser(name,pass,level){
+      //   User.call(this,name,pass);
+      //   this.level = level;
+      // }
+      // VipUser.prototype = new User();
+      // VipUser.prototype.constructor = VipUser;
+      // VipUser.prototype.VipUser = function(){
+      //   alert(this.level);
+      // }
+      // var op = new VipUser("af","54235",4);
+      // op.showName();
+      // op.showPass();
+      // op.VipUser();
+
+      //Es6方法
+      class User{
+        constructor(name,pass){  //constructor构造器
+          this.name = name;
+          this.pass = pass;
+        }
+        showName(){
+          alert(this.name)
+        }
+        showpass(){
+          alert(this.pass)
+        }
+
+      }
+      class vipuser extends User{
+        constructor(name,pass,level){
+          super(name,pass);
+          this.level = level;
+        }
+        showlevel(){
+          alert(this.level)
+        }
+      }
+      var op = new vipuser("af","54235",4);
+      op.showName();
+      op.showpass();
+      op.showlevel();
+
+      
+
+
+
+  </script>
+</html>
