@@ -9,9 +9,9 @@ ES6 各种新语法 入门了解  石川blue讲解
 ----
 
 - [hello-es6](#hello-es6)
-    - [1.ES6怎么来的](#1es6%E6%80%8E%E4%B9%88%E6%9D%A5%E7%9A%84)
-    - [2.ES6兼容性](#2es6%E5%85%BC%E5%AE%B9%E6%80%A7)
-    - [3.变量 let 和 常量 const](#3%E5%8F%98%E9%87%8F-let-%E5%92%8C-%E5%B8%B8%E9%87%8F-const)
+    - [1.ES6怎么来的]
+    - [2.ES6兼容性]
+    - [3.变量 let 和 常量 const]
     - [4.函数-箭头函数](#4%E5%87%BD%E6%95%B0-%E7%AE%AD%E5%A4%B4%E5%87%BD%E6%95%B0)
     - [5.函数-参数](#5%E5%87%BD%E6%95%B0-%E5%8F%82%E6%95%B0)
     - [6.解构赋值](#6%E8%A7%A3%E6%9E%84%E8%B5%8B%E5%80%BC)
@@ -118,6 +118,26 @@ ES6 各种新语法 入门了解  石川blue讲解
 ## 9.ES6的面向对象
 - class关键字，构造器和类分开了
 - class里面直接加方法
+
+## 10.面向对应用——react
+ - 用于构建用户界面的 JavaScript 库
+ - 组件化，一个组件就是一个 class
+ - JSX == bable == browser.js
+ 
+## 11.json
+- JSON 对象
+     - JSON.stringify（json转为字符串）
+     - JSON.parse(字符串转为json)
+- 简写
+     - 名字和值（key和vuale）一样的，只留一个
+     - 方法 :function可以删
+         - show :fucntion(){}
+         - show(){}     
+- Json标准写法
+     - 只能用双引号
+     - 所有的名字必须用应该抱起来
+     - {"a":12,"b":34}
+
 
   
    
