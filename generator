@@ -1,0 +1,43 @@
+<?DOCTYOE HTML>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title></title>
+  </head>
+  <body>
+  
+  </body>
+  <script src="runner.js"></script><!-- 是石川老师写的js -->
+　<script src="https://code.jquery.com/jquery-3.1.1.min.js"></script>
+  <script>
+    //runner(function *(){
+    //   let data1 = yield $.ajax({url:'arr.txt',dataType:'json'});第一个ajax运行，给runner,yield就暂停运行，读完了，结果给data1,下面同上
+    //   let data2 = yield $.ajax({url:'arr2.txt',dataType:'json'});
+    //   let data3 = yield $.ajax({url:'arr3.txt',dataType:'json'});
+
+    //    console.log(data1,data2,data3);
+    // })
+
+    //回调，promise
+    // Promise.all([
+    //   $.ajax({url:'arr.txt',dataType:'json'}),
+    //   $.ajax({url:'arr2.txt',dataType:'json'}),
+    //   $.ajax({url:'arr3.txt',dataType:'json'})
+    //   ]).then(results=>{
+    //     alert('成功了')
+    //   },err=>{
+    //     alert('错了')
+    //   });
+
+   //回调，generator
+     runner(function *(){
+      let data1 = yield $.ajax({url:'arr.txt',dataType:'json'});
+      let data2 = yield $.ajax({url:'arr2.txt',dataType:'json'});
+      let data3 = yield $.ajax({url:'arr3.txt',dataType:'json'});
+
+       console.log(data1,data2,data3);
+    })
+
+  </script>
+
+</html>
