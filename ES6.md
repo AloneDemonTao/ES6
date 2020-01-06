@@ -247,6 +247,34 @@ var res2 = gen.next()
 console.log(res2)
 // { value: undefined, done: true } 最后的value需要return返回
 ```
+
 ## 14.generator-实列runner
+- Promise 适合一次读一组
+- generator 适合逻辑性的
+```js
+//带逻辑-generator
+runner(function *(){
+let userData = yield $.ajax({url:'getUserData',dataType:'json'});
+if(usrData.type=='VIP'){
+    let item = yield $.ajax({url:'getVIPItems',dataType:'json'});
+    }else{
+    let item = yield $.ajax({url:'getItems',dataType:'json'});
+    }
+    //
+})
+```
+
+```js
+// yield 实例，用同步方式写异步
+    const koa =require('koa');
+    const mysql = require('koa-mysql');
+    let db = mysql.craetePool({host:'localhost',user:'root',password:'',database;''});
+    let server = new koa();
+    server.use(function *(){
+    let data = yield db.query(`SELECT * From user_table`);
+    this.body = data;
+    });
+    server.listen(8080);
+```
    
     
