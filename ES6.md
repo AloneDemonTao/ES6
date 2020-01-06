@@ -9,22 +9,22 @@ ES6 各种新语法 入门了解  石川blue讲解
 ----
 
 - [hello-es6](#hello-es6)
-    - [1.ES6怎么来的]
-    - [2.ES6兼容性]
-    - [3.变量 let 和 常量 const]
-    - [4.函数-箭头函数](#4%E5%87%BD%E6%95%B0-%E7%AE%AD%E5%A4%B4%E5%87%BD%E6%95%B0)
-    - [5.函数-参数](#5%E5%87%BD%E6%95%B0-%E5%8F%82%E6%95%B0)
-    - [6.解构赋值](#6%E8%A7%A3%E6%9E%84%E8%B5%8B%E5%80%BC)
-    - [7.数组](#7%E6%95%B0%E7%BB%84)
-    - [8.字符串](#8%E5%AD%97%E7%AC%A6%E4%B8%B2)
-    - [9.面向对象-基础](#9%E9%9D%A2%E5%90%91%E5%AF%B9%E8%B1%A1-%E5%9F%BA%E7%A1%80)
-    - [10.面向对象应用](#10%E9%9D%A2%E5%90%91%E5%AF%B9%E8%B1%A1%E5%BA%94%E7%94%A8)
-    - [11.json](#11json)
-    - [12.Promise](#12promise)
-    - [13.generator-认识生成器函数](#13generator-%E8%AE%A4%E8%AF%86%E7%94%9F%E6%88%90%E5%99%A8%E5%87%BD%E6%95%B0)
-    - [14.generator-yield是啥](#14generator-yield%E6%98%AF%E5%95%A5)
-    - [15.generator-实例](#15generator-%E5%AE%9E%E4%BE%8B)
-    - [16.ES7 预览](#16es7-%E9%A2%84%E8%A7%88)
+    - 1.ES6怎么来的
+    - 2.兼容性（ES2015）
+    - 3.变量
+    - 4.函数——箭头函数
+    - 5.函数的参数
+    - 6.解构赋值
+    - 7.数组
+    - 8.字符串
+    - 9.ES6的面向对象
+    - 10.面向对应用——react
+    - 11.json
+    - 12.Promise
+    - 13.generator-基础
+    - 14.generator-yield是啥
+    - 15.generator-实例
+    - 16.ES7 预览
 
 ----
 
@@ -209,7 +209,7 @@ Promise.race([
 - generator函数前面加一个 `*` 两边可以有空格，或靠近函数或`function`
 - 背后实际生成多个小函数，实现走走停停
 
-## 14.generator-理解版
+## 14.generator-yield是啥
 - `yield`
     - 既可传参，又可以返回
     - 第一个`next()`传参无效，只用来启动
@@ -248,7 +248,7 @@ console.log(res2)
 // { value: undefined, done: true } 最后的value需要return返回
 ```
 
-## 14.generator-实列runner
+## 15.generator-实列
 - Promise 适合一次读一组
 - generator 适合逻辑性的
 ```js
@@ -276,5 +276,5 @@ if(usrData.type=='VIP'){
     });
     server.listen(8080);
 ```
-   
+ ## 16.ES7 预览 
     
