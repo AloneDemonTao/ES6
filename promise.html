@@ -1,0 +1,114 @@
+<?DOCTYOE HTML>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title></title>
+  </head>
+  <body>
+  
+  </body>
+  <script src="https://code.jquery.com/jquery-3.1.1.min.js"></script>
+  <script>
+
+    //let p = new Promise(function(resolve,reject){
+    //  alert(resolve);
+    //  $.ajax({
+    //     url:'arr.txt',
+    //     dataType:'json',
+    //     success(arr){
+    //       resolve(arr);
+    //   },
+    //     error(err){
+    //       reject(err);
+    //     }
+    //   })
+    // });
+    // p.then(function(arr){
+    //   alert("aaa");
+    // },function(err){
+    //   alert("bbb");
+    // })
+
+    // let p1 = new Promise(function(resolve,reject){
+    //  alert(resolve);
+    //  $.ajax({
+    //     url:'arr.txt',
+    //     dataType:'json',
+    //     success(arr){
+    //       resolve(arr);
+    //   },
+    //     error(err){
+    //       reject(err);
+    //     }
+    //   })
+    // });
+    // let p2 = new Promise(function(resolve,reject){
+    //  alert(resolve);
+    //  $.ajax({
+    //     url:'json.txt',
+    //     dataType:'json',
+    //     success(arr){
+    //       resolve(arr);
+    //   },
+    //     error(err){
+    //       reject(err);
+    //     }
+    //   })
+    // });
+    // Promise.all([
+    //   p1,p2
+    // ]).then(function(arr){
+    //   let [res1 ,res2] = arr;
+    //   alert('成功了');
+    //   alert(res1);
+    //   alert(res2);
+    // },function(){
+    //   alert('至少一个失败了');
+    // });
+
+
+
+    // function createPromise(url){
+    //   return new Promise(function(resolve,reject){
+
+    //     $.ajax({
+    //     url,
+    //     dataType:'json',
+    //     success(arr){
+    //       resolve(arr);
+    //   },
+    //     error(err){
+    //       reject(err);
+    //     }
+    //   })
+
+    //   });
+    // }
+    // Promise.all([
+    //   createPromise('data/arr.txt'),
+    //   createPromise('data/json.txt'),
+    // ]).then(function(arr){
+    //     let [res1 ,res2] = arr;
+    //     alert('成功了');
+    //     alert(res1);
+    //     alert(res2);
+    //   },function(){
+    //     alert('至少一个失败了');
+    //   });
+
+    Promise.all([
+      $.ajax({url:'data/arr.txt',dataType:'json'}),
+      $.ajax({url:'data/json.txt',dataType:'json'})
+      ]).then(results=>{
+        let [arr,json] = results;
+        alert('成功了');
+        console.log(arr,json);
+      },function(){
+        alert('失败了');
+      });
+
+
+
+  </script>
+
+</html>
