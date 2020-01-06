@@ -126,8 +126,19 @@ ES6 各种新语法 入门了解  石川blue讲解
  
 ## 11.json
 - JSON 对象
-     - JSON.stringify（json转为字符串）
-     - JSON.parse(字符串转为json)
+     - 对象（object）
+    - 是 JavaScript 语言的核心概念，也是最重要的数据类型
+    - 对象就是一组“键值对”（key-value）的集合，是一种无序的复合数据集合
+    - 对象的所有键名都是字符串, 所以加不加引号都可以
+    - 如果键名是数值，会被自动转为字符串
+    - 对象的每一个键名又称为“属性”（property），它的“键值”可以是任何数据类型
+    - 如果一个属性的值为函数，通常把这个属性称为“方法”，它可以像函数那样调用
+    - in 运算符用于检查对象是否包含某个属性（注意，检查的是键名，不是键值
+    - for...in循环用来遍历一个对象的全部属性
+
+- 对象 简写
+    - key-value 一样时可以简写
+    - 里面函数可以简写, 去掉
 - 简写
      - 名字和值（key和vuale）一样的，只留一个
      - 方法 :function可以删
@@ -137,8 +148,58 @@ ES6 各种新语法 入门了解  石川blue讲解
      - 只能用双引号
      - 所有的名字必须用应该抱起来
      - {"a":12,"b":34}
+     
+## 12.promise
+- 异步：操作之间没有关系，同时进行多个操作
+```js
+ajax('/banners',function(banner_data){
+    ajax('/hot',function(hot_data){
+        ajax('dog',function(dog_data){
+             ajax('cat',function(cat_data){
+        
+            },function(){
+                alert("失败了");
+            });
+        },function(){
+            alert("失败了");
+        });
+        
+      },function(){
+           alert("失败"）;
+      });
+     },function(){
+        alert("失败了");
+    });                   
+```
+- 异步：同时只能做一件事
+```js
+let banner_data =ajax_async("/banner");
+let hot_data =ajac-async("/hot");
+let dog_data =ajac-async("/dog");
+let cat_data =ajac-async("/cat");
+```
+-prmise.all
+     - 用消除异步一样的方式，来书写异步代码
+     - 有了promise后的异步
+```js
+Promise.all([$.ajax(),$.ajax(),$.ajax()]).then(results={
+    //对了
+},err=>{
+    //错了
+});
+```
+-prmise.race(竞速)
+    - Promse.race就是赛跑的意思
+    - 哪个结果获得的快，就返回那个结果
+    - 不管结果本身是成功状态还是失败状态
+```js
+Promise.race([
+ $.ajax({url:'http://baidu.ww.com'});
+ $.ajax({url:'http1://baidu.ww.com'});
+ $.ajax({url:'http2://baidu.ww.com'});
+ $.ajax({url:'http3://baidu.ww.com'});
+ ]};
 
-
-  
+```
    
     
