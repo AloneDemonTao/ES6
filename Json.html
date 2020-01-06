@@ -1,0 +1,55 @@
+<?DOCTYOE HTML>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title></title>
+  </head>
+  <body>
+  
+  </body>
+  <script>
+    //json转为字符串
+    // let json = {"a":2,"b":12};
+    // let str = 'http//:kaikeba.com=' + encodeURIComponent(JSON.stringify(json));
+    // alert(str);
+
+    //字符串转为json
+    // let str = '{"a":54,"b":35,"c":543}';
+    // let json=JSON.parse(str);
+    // console.log(json);
+
+    //json的简写
+
+    // let a = 12;
+    // let b = 3 ;
+    // let json={a:a,b:b}
+    // console.log(json); //旧版本
+
+
+    // let a = 12;
+    // let b = 3 ;
+    // let json={a,b};
+    // console.log(json); //旧版本
+
+    //方法简写
+    // let json={
+    //   a:12,
+    //   show :function(){
+    //     alert(this.a);
+    //   }
+    // };
+    // json.show(); //旧版本
+
+    let json={
+      a:12,
+      show(){
+        alert(this.a);
+      }
+    };
+    json.show(); //
+
+
+
+  </script>
+
+</html>
