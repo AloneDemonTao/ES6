@@ -276,5 +276,72 @@ if(usrData.type=='VIP'){
     });
     server.listen(8080);
 ```
- ## 16.ES7 预览 
+## 16.ES7 &ES8 预览 
+- 数组-include
+   - 判断你数组数组是否包含某个东西
+- 数组  key/values/entries
+    - key=>所有的key拿出来
+    ```js
+      let arr = [3,5,8,43];
+      for(let key of arr.keys()){
+        alert(key);
+      }//key输出值为0,1,2,3
+    ```
+   - values=>所有的values拿出来
+   - entries=>所有的键值对拿出来
+    ```js
+        let arr = [3,5,8,43];
+        for(let entries of arr.entries()){
+          alert(entries);
+        }//entries输出值为0,3;1,5;2,8;3,43
+    ```
     
+   - for...in————循环的东西是数组(json)的下表（key）
+    ```js
+      let arr = [1,5,6,9,6];
+      for(let i in arr){
+        alert(i);
+      }//i输出值为0，1,2,3,4
+      
+      //json
+      let json = {a:1,b:5,c:6,d:9,e:6};
+      for(let i in json){
+        alert(i);
+      }//i输出值为a,b,c,d,e
+    ```
+   - for...of————循环的东西是数组(json对象是个不可迭代的对象，for...of不能用于json)的值（values）
+      ```js
+       let arr = [1,5,6,9,6];
+        for(let i of arr){
+            alert(i);
+        }//i输出值为1,5,6,9,6
+      ```
+- 幂
+   -求幂
+ ```js
+   alert(Math.pow(3,5));//以前
+   alert(3**5);//现在
+ ```
+ - startsWith/endsWIth
+ - padStart/padEnd(从开始的位置取5是内容不够，在前面补空格/从开始的位置取5位，要是内容不够，在前面补空格
+ ```js
+  console.log('a43'.padStart(从开始的位置取8（自定义）位，要是内容不够，在前面补空格/8
+  console.log('a43'.padEnd(8));
+ ```
+- 语法容忍度
+    -数组，函数参数后面多一个逗号可以忍
+    
+- async await
+    - 不依赖于外部runner
+    - 可以使用箭头函数
+```js
+  let reaData = async()=>{
+      let data1 = await $.ajax({url:'arr.txt',dataType:'json'});
+      let data2 = await $.ajax({url:'arr2.txt',dataType:'json'});
+      let data3 = await $.ajax({url:'arr3.txt',dataType:'json'});
+      // console.log(data1,data2,data3);
+    }
+    reaData();
+```
+ 
+ 
