@@ -8,7 +8,7 @@ ES6 各种新语法 入门了解  石川blue讲解
 
 ----
 
-- [hello-es6](#hello-es6)
+- hello-es6
     - 1.ES6怎么来的
     - 2.兼容性（ES2015）
     - 3.变量
